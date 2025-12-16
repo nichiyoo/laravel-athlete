@@ -19,7 +19,7 @@ class AthleteFactory extends Factory
         $sports = ['football', 'basketball', 'swimming', 'tennis', 'volleyball'];
 
         return [
-            'name' => fake()->name(),
+            'name' => fake()->firstName() . ' ' . fake()->lastName(),
             'country' => fake()->country(),
             'sport' => fake()->randomElement($sports),
             'debut' => fake()->dateTimeBetween('-10 years', 'now')->format('Y-m-d'),
